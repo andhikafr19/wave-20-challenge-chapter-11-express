@@ -1,14 +1,13 @@
-const express = require("express");
-const router = express.Router();
-const bodyParser = require("body-parser");
-const passport = require('passport');
+const express = require('express')
+const router = express.Router()
+const bodyParser = require('body-parser')
 const restrictUser = require('../middleware/restrictUser')
 
 require('../lib/passport')
 
-const Player = require("../model/player");
+const Player = require('../model/player')
 
-router.use(bodyParser.json());
+router.use(bodyParser.json())
 
 /*
 * TODO
@@ -16,24 +15,22 @@ router.use(bodyParser.json());
 * add try catch
 */
 
-router.get("/:id", restrictUser, async (req, res) => {
-    return res.json(await Player.findById(req.params.id))
-});
+router.get('/:id', restrictUser, async (req, res) => {
+  return res.json(await Player.findById(req.params.id))
+})
 
-router.put("/:id", restrictUser, async (req, res) => {
-    try {
-        return res.json(await Player.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            {
-                returnOriginal: false,
-            }
-        ));
-    } catch(e){
-        console.log(e)
-    }
-});
+router.put('/:id', restrictUser, async (req, res) => {
+  try {
+    return res.json(await Player.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        returnOriginal: false
+      }
+    ))
+  } catch (e) {
+    console.log(e)
+  }
+})
 
-module.exports = router;
-
-
+module.exports = router

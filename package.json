@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "eslint": "eslint lib/*.js middleware/*.js model/*.js routes/*.js server.js --fix"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,11 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^2.0.18"
   }
 }

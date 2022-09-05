@@ -1,29 +1,28 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt");
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const playerSchema = new Schema({
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-    full_name: {
-        type: String,
-        required: true,
-    },
-    game_name: {
-        type: String,
-        required: true,
-    },
-    country: {
-        type: String,
-        required: true,
-    },
-});
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  full_name: {
+    type: String,
+    required: true
+  },
+  game_name: {
+    type: String,
+    required: true
+  },
+  country: {
+    type: String,
+    required: true
+  }
+})
 
-module.exports = mongoose.model("Player", playerSchema);
+module.exports = mongoose.model('Player', playerSchema)
