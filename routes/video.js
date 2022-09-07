@@ -3,10 +3,12 @@ const router = express.Router()
 const bodyParser = require('body-parser')
 const { video } = require('../controllers/mediaController')
 
+const Video = require('../model/video')
+
 router.use(bodyParser.json())
 
-router.get('/', (req, res) => {
-  return res.send('video')
+router.get('/', async (req, res) => {
+  return res.json(await Video.find())
 })
 
 // upload video
