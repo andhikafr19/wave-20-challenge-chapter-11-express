@@ -5,6 +5,7 @@ const cors = require('cors')
 
 const playerRoute = require('./routes/player')
 const authRoute = require('./routes/auth')
+const videoRoute = require('./routes/video')
 
 const port = process.env.PORT || 3000
 
@@ -20,8 +21,8 @@ app.use(cors({
 app.use(passport.initialize())
 
 app.use('/player', passport.authenticate('jwt', { session: false }), playerRoute)
-
 app.use('/auth', authRoute)
+app.use('/video', videoRoute)
 
 app.get('/', (req, res) => {
   res.send('welcome to CRUD service')
