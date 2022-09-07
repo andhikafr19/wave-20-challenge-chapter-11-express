@@ -5,8 +5,8 @@ const { video } = require('../controllers/mediaController')
 
 router.use(bodyParser.json())
 
-router.get('/', () => {
-  return 'asdasd'
+router.get('/', (req, res) => {
+  return res.send('video')
 })
 
 // upload video
