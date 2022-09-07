@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { login, register } = require('../controllers/authController.js')
+const { register } = require('../controllers/authController.js')
 const mockRequest = (body = {}) => { return { body } }
 const mockResponse = () => {
   const res = {}
