@@ -1,5 +1,5 @@
 TN:
-SF:controllers/authController.js
+SF:controllers\authController.js
 FN:6,login
 FN:40,register
 FNF:2
@@ -83,7 +83,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:controllers/baseController.js
+SF:controllers\baseController.js
 FN:2,index
 FN:8,sum
 FNF:2
@@ -118,7 +118,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:model/player.js
+SF:model\player.js
 FNF:0
 FNH:0
 DA:1,1
